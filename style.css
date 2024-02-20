@@ -7,10 +7,13 @@
 }
 body{
     font-family: "Roboto", sans-serif;
+    background: url('./pics/bg-body.jpg') no-repeat;
+    background-size: cover;
 }
 .wrapper{
     max-width: 800px;
     margin:100px auto;
+    background: white;
 }
 .header{
     height: 360px;
@@ -18,13 +21,82 @@ body{
     position: relative;
 
 }
-ul{
+.header>ul{
     background: rgba(190,0,0,.8);
     position: absolute;
     bottom:0;
     right:0;
     left:0;
 }
+ul::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+a{
+    padding:20px;
+    display: block;
+    color:white;
+    text-decoration: none;
+    
+}
+a:hover{
+    background: rgba(0,0,0,.8)
+}
+
+li{
+    float:left;
+}
+
+.has_submenu{
+    position: relative;
+}
+.has_submenu::after {
+    content: "⯆";
+    color:white;
+    position: absolute;
+    right:10px;
+    top:17px;
+  }
+  .has_submenu>a{
+    padding-right: 30px;
+  }
+  .submenu li{
+    display: block;
+    width:100%;
+  }
+
+  .submenu li:hover{
+    background: rgba(0,0,0,.8)
+}
+.has_submenu:hover .submenu{
+    display:block;
+}
+.submenu{
+    position:absolute;
+    background: rgba(190,0,0,1);
+    left:0;
+    width: 200px;
+    display: none;
+}
+.submenu a{
+    display: block;
+    width: 100%;
+}
+.content{
+    padding: 25px;
+}
+.content h1{
+    margin:20px 0 20px 0;
+}
+.content h2{
+    margin:20px 0;
+}
+.content p{
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
 
 .cookie_accept{
     background: rgba(0,0,0,.9);
@@ -49,4 +121,8 @@ ul{
 .cookie_accept button:hover{
     background: red;
     color:white;
+}
+
+.hidden{
+    display:none;
 }
