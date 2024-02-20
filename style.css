@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.wrapper{
+    max-width: 800px;
+    margin:100px auto;
+}
+.header{
+    height: 360px;
+    background: url('./pics/bg-header.jpg') no-repeat;
+    position: relative;
+
+}
+ul{
+    background: rgba(190,0,0,.8);
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+.cookie_accept{
+    background: rgba(0,0,0,.9);
+    color:white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+.cookie_accept button{
+    background: yellow;
+    color:black;
+    cursor:pointer;
+    margin-left: 5px;
+    margin: 0 0 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    ;
+}
+.cookie_accept button:hover{
+    background: red;
+    color:white;
+}
